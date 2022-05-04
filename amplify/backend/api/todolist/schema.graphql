@@ -1,0 +1,11 @@
+enum STATUS {
+  DRAFT
+  COMPLETED
+}
+
+type Todo @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  title: String
+  description: String
+  status: STATUS
+}
